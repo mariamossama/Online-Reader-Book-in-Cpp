@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <sstream>
-#include<C:\Users\Mariam\Desktop\PROJECT_CPP\Book.H>
+#include "Book.H"
 using namespace std;
 const string GetCurrentTimeDate();
 class BookReadingSession{
@@ -19,7 +19,6 @@ class BookReadingSession{
             }
         BookReadingSession(Book* book):
             book(book) , curr_page(0) , last_acc_date(GetCurrentTimeDate()){
-
             }
 
         const Book* GetBook() const {
@@ -67,8 +66,6 @@ const string GetCurrentTimeDate() {
     struct tm  tstruct;
     char       buf[80];
     tstruct = *localtime(&now);
-    // Visit http://en.cppreference.com/w/cpp/chrono/c/strftime
-    // for more information about date/time format
     strftime(buf, sizeof(buf), "%Y-%m-%d.%X", &tstruct);
 
     return buf;
