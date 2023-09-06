@@ -49,6 +49,10 @@ class User{
             return name;
         }
 
+        const string& GetUserName() const{
+            return user_name;
+        }
+
         void SetName(const string& name)
         {
             this->name = name;
@@ -80,6 +84,23 @@ class User{
             is_lib_admin= isLibAdmin;
         }
 
+        void Read(string userName)
+        {
+            SetUserName(userName);
+            cout << "Enter your nama :\n";
+            string name ;
+            cin >> name;
+            SetName(name);
+            cout << "Enter your password :\n";
+            string pass;
+            cin >> pass;
+            SetPassword(pass);
+            cout << "Enter your email :\n";
+            string email;
+            cin>> email;
+            SetEmail(email);
+
+        }
         const vector<BookReadingSession*>& GetReadingSessions() const {
             return reading_sessions;
         }
