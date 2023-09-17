@@ -152,4 +152,6 @@ class UsersManager{
         const User* GetCurrentUser() const {
             return curr_user;
         }
+
+        
 };

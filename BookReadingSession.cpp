@@ -3,9 +3,13 @@
 #include <stdio.h>
 #include <time.h>
 #include <sstream>
+
 #include "Book.H"
+
 using namespace std;
+
 const string GetCurrentTimeDate();
+
 class BookReadingSession{
     private:
         Book* book;
